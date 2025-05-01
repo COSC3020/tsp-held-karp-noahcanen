@@ -1,5 +1,5 @@
 # Traveling Salesperson Problem -- Held-Karp Algorithm
-
+     
 This exercise is about the Traveling Salesperson Problem I mentioned in the
 lecture on NP-hard problems -- given a set of cities, determine the length of
 the shortest tour that visits all of them. We can get from any city to any other
