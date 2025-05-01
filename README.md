@@ -51,7 +51,7 @@ reasoning, to this markdown file.
 
 Normally, without a memory of the paths we have already taken, the complexity would be O(n!). However, because I have a memory system that returns previously known sizes for a combination of cities, the worst-case complexity of my algorithm is $2^n$. This happens N times for all different start points, bringing the total worst-case complexity to $O(2^n*n)$.
 
-
+    
 The worst-case memory complexity remains the same because my memory system relies on previously calculated similar note sets being stored inside it. By the end of a certain path, it will have $2^n$ items stored in it. This is then done $n$ times, so the worst-case asymptotic memory complexity is $O(2^n*n)$.
 
 
