@@ -9,7 +9,7 @@ function tsp_hk(distance_matrix) {
     return min_val
 }
 function tspPath(graph, start, cities,memory){
-    place = JSON.stringify(cities) + start
+    place = JSON.stringify(cities)
     if(memory[place] != null){return memory[place]}
     if(cities.length == 2){
         return memory[place] = graph[cities[0]][cities[1]]
