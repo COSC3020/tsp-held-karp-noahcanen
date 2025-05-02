@@ -48,11 +48,14 @@ is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
 
-
-Normally, without a memory of the paths we have already taken, the complexity would be O(n!). However, because I have a memory system that returns previously known sizes for a combination of cities, the worst-case complexity of my algorithm is $2^n$. This happens N times for all different start points, bringing the total worst-case complexity to $O(2^n*n)$.
+Normally, without a memory of the paths we have already taken, the complexity would be O(n!). However, because I have a memory system that returns previously known sizes of a certain subset, we can reduce that complexity to $2^n$. However, each of these subsets has a starting node that we need to take note of, so we will have to go through this process N times. This results in an overall complexity of $O(2^n*n)$. Then all of that happens N times for all different start points, bringing the total worst-case complexity to $O(2^n*n*n)$ = $O (2^n * n^2)$
 
     
-The worst-case memory complexity remains the same because my memory system relies on previously calculated similar note sets being stored inside it. By the end of a certain path, it will have $2^n$ items stored in it. This is then done $n$ times, so the worst-case asymptotic memory complexity is $O(2^n*n)$.
+The worst-case memory complexity 
+
+
+My memory system stores previously calculated similar note sets, but because the starting node matters for these, it has n different versions of each set. By the end of a certain path, it will have $2^n*n$ items stored in it. This is then done $n$ times, but the memory is reset each time, so the worst-case asymptotic memory complexity is $O (2^n*n)$ .
+
 
 
 For this assignment, I used the resource of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf, https://www.geeksforgeeks.org/travelling-salesman-problem-using-dynamic-programming/, https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript
