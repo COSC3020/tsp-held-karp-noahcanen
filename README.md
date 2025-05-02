@@ -48,13 +48,13 @@ is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
 
-Normally, without a memory of the paths we have already taken, the complexity would be O(n!). However, because I have a memory system that returns previously known sizes of a certain subset, we can reduce that complexity to $2^n$. However, each of these subsets has a starting node that we need to take note of, so we will have to go through this process N times. This results in an overall complexity of $O(2^n*n)$. Then all of that happens N times for all different start points, bringing the total worst-case complexity to $O(2^n*n*n)$ = $O (2^n * n^2)$
+Normally, without a memory of the paths we have already taken, the complexity would be O(n!). However, because I have a memory system that returns previously known sizes of a certain subset, we can reduce that complexity to $2^n$. However, each of these subsets has a starting node that we need to take note of, so we will have to go through this process N times. This results in an overall complexity of $O(2^n * n)$. Then all of that happens N times for all different start points, bringing the total worst-case complexity to $O(2^n * n * n)$ = $O (2^n * n^2)$
 
     
 The worst-case memory complexity 
 
 
-My memory system stores previously calculated similar note sets, but because the starting node matters for these, it has n different versions of each set. By the end of a certain path, it will have $2^n*n$ items stored in it. This is then done $n$ times, but the memory is reset each time, so the worst-case asymptotic memory complexity is $O (2^n*n)$ .
+My memory system stores previously calculated similar note sets, but because the starting node matters for these, it has n different versions of each set. By the end of a certain path, it will have $2^n * n$ items stored in it. This is then done $n$ times, but the memory is reset each time, so the worst-case asymptotic memory complexity is $O (2^n * n)$ .
 
 
 
